@@ -64,7 +64,7 @@ public class JdbcTemplateItemRepositoryV2 implements ItemRepository {
     public void update(Long itemId, ItemUpdateDto updateParam) {
         String sql = "update item " +
                 "set item_name=:itemName, price=:price, quantity=:quantity " +
-                "where id=id";
+                "where id=:id";
 
         // 파라미터 수동 생성
         SqlParameterSource param = new MapSqlParameterSource()
